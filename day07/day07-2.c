@@ -37,6 +37,6 @@ int main(void) {
         printf("\n");
     }
 
-    printf("\n최종 원주율 : %lf\n", PI);
+    printf("원주율 : %lf\n", PI);
     return 0;
 }
