@@ -7,7 +7,7 @@ int main() {
 	char** name;
 	int* score;
 
-	printf("ÇĞ»ı ¼ö ÀÔ·Â : \n");
+	printf("í•™ìƒ ìˆ˜ ì…ë ¥ : \n");
 	scanf_s("%d", &N);
 
 	snum = (int*)malloc(N * sizeof(int));
@@ -18,19 +18,19 @@ int main() {
 	}
 
 	for (int i = 0; i < N; i++) {
-		printf("%d¹øÂ° ÇĞ»ı Á¤º¸ ÀÔ·Â:\n", i + 1);
-		printf("ÇĞ¹ø: \n");
+		printf("%dë²ˆì§¸ í•™ìƒ ì •ë³´ ì…ë ¥:\n", i + 1);
+		printf("í•™ë²ˆ: \n");
 		scanf_s("%d", &snum[i]);
 
-		printf("ÀÌ¸§: \n");
+		printf("ì´ë¦„: \n");
 		scanf_s("%s", name[i], 100);
 		
-		printf("Á¡¼ö: \n");
+		printf("ì ìˆ˜: \n");
 		scanf_s("%d", &score[i]);
 	}
 
 	for (int i = 0; i < N; i++) {
-		printf("ÇĞ¹ø: %d, ÀÌ¸§: %s, Á¡¼ö: %d\n", snum[i], name[i], score[i]);
+		printf("í•™ë²ˆ: %d, ì´ë¦„: %s, ì ìˆ˜: %d\n", snum[i], name[i], score[i]);
 	}
 
 	free(snum);
