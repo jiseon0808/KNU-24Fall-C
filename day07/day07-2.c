@@ -26,17 +26,17 @@ int main(void) {
 
         count = 0;
         PI = 4 * ((double)circle / (double)cnt);
-        printf("%3d%% ÁøÇà, ¿øÁÖÀ² : %lf ", i, PI);
+        printf("%3d%% ì§„í–‰, ì›ì£¼ìœ¨ : %lf ", i, PI);
 
         for (int j = 0; j < i / 5; j++)
-            printf("¡á");
+            printf("â– ");
 
         for (int a = 0; a < 20 - i / 5; a++)
-            printf("¡à");
+            printf("â–¡");
 
         printf("\n");
     }
 
-    printf("\nÃÖÁ¾ ¿øÁÖÀ² : %lf\n", PI);
+    printf("\nìµœì¢… ì›ì£¼ìœ¨ : %lf\n", PI);
     return 0;
 }
