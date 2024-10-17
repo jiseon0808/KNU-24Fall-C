@@ -20,7 +20,6 @@ int main() {
     printf("배열 출력:\n");
     printArray(array);  // 배열 출력 코드
 
-    printf("\n배열 순회 시작:\n");
     movePointer(array);  // 포인터를 사용한 배열 순회
 
     return 0;
@@ -48,11 +47,28 @@ void printArray(int(*array)[SIZE]) {
 // void 포인터를 사용한 배열 순회 함수
 void movePointer(void* array) {
     int(*arr)[SIZE] = (int(*)[SIZE])array;
+    int x = 0, y = 0;  // 시작 위치 (0, 0)
 
-    for (int i = 0; i < SIZE; i++) {
-        for (int j = 0; j < SIZE; j++) {
-            int value = *(*(arr + i) + j);  // 포인터 연산을 이용해 배열 요소 접근
-            printf("현재 위치: (%d, %d), 값: %d\n", i, j, value);
+    printf("현재 위치: (%d, %d), 배열의 값: %d\n", x, y, *(*(arr + x) + y));
+
+    while (1) {
+        int value = *(*(arr + x) + y);  // 현재 위치의 값
+        int newX = x, newY = y + value;  // 오른쪽으로 이동
+
+        if (newY >= SIZE) { // 만약 범위를 벗어난 경우 다음 행으로 이동해야함..
+            newX += newY / SIZE;  // 행 증가
+            newY %= SIZE;  // 열 값 재조정
         }
+
+        // 이동할 위치가 배열의 범위를 벗어나면 종료
+        if (newX >= SIZE) {
+            printf("더 이상 이동할 수 없습니다.\n");
+            printf("종료 위치: (%d, %d), 배열의 값: %d\n", x, y, value);
+            break;
+        }
+
+        x = newX;
+        y = newY;
+        printf("현재 위치: (%d, %d), 배열의 값: %d\n", x, y, *(*(arr + x) + y));
     }
 }
