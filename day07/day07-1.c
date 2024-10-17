@@ -2,7 +2,7 @@
 
 int main() {
     int n;
-    printf("¸î Ãþ ÇÇ¶ó¹Ìµå? : ");
+    printf("몇층? : ");
     scanf_s("%d", &n);
 
     for (int i = 0; i < n; i++) {
