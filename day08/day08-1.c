@@ -6,12 +6,12 @@ void reverse(char* s);
 int main() {
     char str[100];
 
-    printf("¹®ÀÚ¿­À» ÀÔ·ÂÇÏ¼¼¿ä : ");
+    printf("ë¬¸ìì—´ì„ ì…ë ¥í•˜ì„¸ìš” : ");
     scanf_s("%s", str, (unsigned int)sizeof(str));
 
     reverse(str);
 
-    printf("µÚÁı¾îÁø ¹®ÀÚ¿­ : %s\n", str);
+    printf("ë’¤ì§‘ì–´ì§„ ë¬¸ìì—´ : %s\n", str);
     return 0;
 }
 
