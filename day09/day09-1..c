@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// 3Â÷¿ø º¤ÅÍ Á¤ÀÇ
+// 3ì°¨ì› ë²¡í„° ì •ì˜
 struct vector {
     float x, y, z;
 };
@@ -37,50 +37,50 @@ int main() {
     struct vector v1, v2;
     int choice;
    
-    printf("Ã¹¹øÂ° º¤ÅÍ (x, y, z) : ");
+    printf("ì²«ë²ˆì§¸ ë²¡í„° (x, y, z) : ");
     scanf_s("%f %f %f", &v1.x, &v1.y, &v1.z);
-    printf("µÎ¹øÂ° º¤ÅÍ (x, y, z) : ");
+    printf("ë‘ë²ˆì§¸ ë²¡í„° (x, y, z) : ");
     scanf_s("%f %f %f", &v2.x, &v2.y, &v2.z);
 
-    printf("\nÀÔ·ÂµÈ Ã¹¹øÂ° º¤ÅÍ: %.1f, %.1f, %.1f\n", v1.x, v1.y, v1.z);
-    printf("ÀÔ·ÂµÈ µÎ¹øÂ° º¤ÅÍ: %.1f, %.1f, %.1f\n", v2.x, v2.y, v2.z);
+    printf("\nì…ë ¥ëœ ì²«ë²ˆì§¸ ë²¡í„°: %.1f, %.1f, %.1f\n", v1.x, v1.y, v1.z);
+    printf("ì…ë ¥ëœ ë‘ë²ˆì§¸ ë²¡í„°: %.1f, %.1f, %.1f\n", v2.x, v2.y, v2.z);
 
     printf("\n------------\n");
-    printf("1. º¤ÅÍÀÇ ÇÕ\n");
-    printf("2. º¤ÅÍÀÇ Â÷\n");
-    printf("3. º¤ÅÍÀÇ ¿ÜÀû\n");
-    printf("4. º¤ÅÍÀÇ ³»Àû\n");
-    printf("5. Á¾·á\n");
+    printf("1. ë²¡í„°ì˜ í•©\n");
+    printf("2. ë²¡í„°ì˜ ì°¨\n");
+    printf("3. ë²¡í„°ì˜ ì™¸ì \n");
+    printf("4. ë²¡í„°ì˜ ë‚´ì \n");
+    printf("5. ì¢…ë£Œ\n");
     printf("--------------\n");
 
-    printf("¸í·É ÀÔ·Â: ");
+    printf("ëª…ë ¹ ì…ë ¥: ");
     scanf_s("%d", &choice);
 
 
     switch (choice) {
     case 1: {
         struct vector result = add(v1, v2);
-        printf("º¤ÅÍÀÇ ÇÕ: (%.1f, %.1f, %.1f)\n", result.x, result.y, result.z);
+        printf("ë²¡í„°ì˜ í•©: (%.1f, %.1f, %.1f)\n", result.x, result.y, result.z);
         break;
     }
     case 2: {
         struct vector result = cha(v1, v2);
-        printf("º¤ÅÍÀÇ Â÷: (%.1f, %.1f, %.1f)\n", result.x, result.y, result.z);
+        printf("ë²¡í„°ì˜ ì°¨: (%.1f, %.1f, %.1f)\n", result.x, result.y, result.z);
         break;
     }
     case 3: {
         struct vector result = cross(v1, v2);
-        printf("º¤ÅÍÀÇ ¿ÜÀûÀº\nx: %.1f, y: %.1f, z: %.1f\n",
+        printf("ë²¡í„°ì˜ ì™¸ì ì€\nx: %.1f, y: %.1f, z: %.1f\n",
             result.x, result.y, result.z);
         break;
     }
     case 4: {
         float result = dot(v1, v2);
-        printf("º¤ÅÍÀÇ ³»ÀûÀº vec1 ¡¤ vec2 = %.1f\n", result);
+        printf("ë²¡í„°ì˜ ë‚´ì ì€ vec1 Â· vec2 = %.1f\n", result);
         break;
     }
     default:
-        printf("Á¾·á.\n");
+        printf("ì¢…ë£Œ.\n");
     }
 
     return 0;
