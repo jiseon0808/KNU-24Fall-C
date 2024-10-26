@@ -81,6 +81,7 @@ int main() {
     }
     default:
         printf("종료.\n");
+        return 0;
     }
 
     return 0;
