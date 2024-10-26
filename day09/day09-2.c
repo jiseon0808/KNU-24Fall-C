@@ -27,7 +27,10 @@ int main() {
         }
 
         printf("상품명: ");
-        scanf_s("%s", products[i].name, sizeof(products[i].name));
+        getchar();
+        fgets(products[i].name, sizeof(products[i].name), stdin);
+        products[i].name[strcspn(products[i].name, "\n")] = '\0';
+        
         printf("가격: ");
         scanf_s("%d", &products[i].price);
         printf("\n");
