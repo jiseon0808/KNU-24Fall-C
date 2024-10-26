@@ -4,7 +4,7 @@
 
 struct Product {
     int id, price;
-    char name[10];
+    char name[20];
 };
 
 void printProduct(struct Product p) {
